@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQZ-xx-JWZ" customClass="MSGPlaceholderTextView" customModule="MessengerKit" customModuleProvider="target">
-                    <rect key="frame" x="38" y="5" width="386" height="40"/>
+                    <rect key="frame" x="53" y="5" width="371" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grt-NM-bT7" customClass="MSGImessageSendButton" customModule="MessengerKit" customModuleProvider="target">
@@ -31,7 +31,7 @@
                     <state key="normal" image="Arrow"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHi-WF-iV4">
-                    <rect key="frame" x="0.0" y="5" width="38" height="45"/>
+                    <rect key="frame" x="0.0" y="5" width="53" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="ssu-Ui-OxE"/>
                     </constraints>
@@ -43,7 +43,7 @@
                 <constraint firstItem="eQZ-xx-JWZ" firstAttribute="leading" secondItem="NHi-WF-iV4" secondAttribute="trailing" id="2M6-Gp-x2B"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="grt-NM-bT7" secondAttribute="trailing" constant="15" id="4eL-ov-ts4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NHi-WF-iV4" secondAttribute="bottom" id="Mp2-46-mpP"/>
-                <constraint firstItem="eQZ-xx-JWZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="38" id="PRK-v3-aI1"/>
+                <constraint firstItem="eQZ-xx-JWZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="53" id="PRK-v3-aI1"/>
                 <constraint firstItem="eQZ-xx-JWZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="SJn-PA-lEg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eQZ-xx-JWZ" secondAttribute="trailing" constant="10" id="l6v-w6-uKZ"/>
                 <constraint firstItem="NHi-WF-iV4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="olw-xY-uTi"/>
