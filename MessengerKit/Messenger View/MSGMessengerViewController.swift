@@ -159,6 +159,7 @@ open class MSGMessengerViewController: UIViewController {
     
         messageInputView.addTarget(self, action: #selector(inputViewDidChange(inputView:)), for: .valueChanged)
         messageInputView.addTarget(self, action: #selector(inputViewPrimaryActionTriggered(inputView:)), for: .primaryActionTriggered)
+        messageInputView.addTarget(self, action: #selector(inputViewAttachActionTriggered(inputView:)), for: .touchCancel)
     }
     
     open func setupCollectionView() {
@@ -189,6 +190,8 @@ open class MSGMessengerViewController: UIViewController {
     @objc open dynamic func inputViewDidChange(inputView: MSGInputView) { }
     
     @objc open dynamic func inputViewPrimaryActionTriggered(inputView: MSGInputView) { }
+    
+    @objc open dynamic func inputViewAttachActionTriggered(inputView: MSGInputView) { }
     
     
     // MARK: - Keyboard

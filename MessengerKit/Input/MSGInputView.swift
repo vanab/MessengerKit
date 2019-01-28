@@ -18,6 +18,7 @@ open class MSGInputView: UIControl {
     /// The send button
     @IBOutlet open var sendButton: UIButton!
 
+    @IBOutlet weak var attachButton: UIButton!
     /// The height constraint to be modified as required.
     /// This should not be set manually but instead use the `minHeight` and `maxHeight` properties.
     private var heightConstraint: NSLayoutConstraint!
@@ -47,7 +48,8 @@ open class MSGInputView: UIControl {
     /// The message the user sent.
     /// This is stored whenever the send button is tapped.
     private(set) open var message = ""
-
+    
+    
     /// The text in the textView
     private var text: String! {
         return textView.text
@@ -98,12 +100,19 @@ open class MSGInputView: UIControl {
     private func setupSendButton() {
         sendButton.isEnabled = false
         sendButton.addTarget(self, action: #selector(sendButtonTapped(_:)), for: .touchUpInside)
+        if attachButton != nil {
+            attachButton.addTarget(self, action: #selector(attachButtonTapped(_:)), for: .touchUpInside)
+        }
     }
 
     @objc func sendButtonTapped(_ sender: UIButton) {
         message = textView.text
         textView.text = nil
         sendActions(for: .primaryActionTriggered)
+    }
+    
+    @objc func attachButtonTapped(_ sender: UIButton) {
+        sendActions(for: .touchCancel)
     }
     
     @discardableResult open override func resignFirstResponder() -> Bool {
