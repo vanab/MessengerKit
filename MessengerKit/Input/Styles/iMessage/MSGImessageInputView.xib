@@ -31,18 +31,22 @@
                     <state key="normal" image="Arrow"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHi-WF-iV4">
-                    <rect key="frame" x="10" y="14" width="18" height="22"/>
+                    <rect key="frame" x="0.0" y="5" width="38" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="ssu-Ui-OxE"/>
+                    </constraints>
                     <state key="normal" image="skrepa"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="eQZ-xx-JWZ" firstAttribute="leading" secondItem="NHi-WF-iV4" secondAttribute="trailing" id="2M6-Gp-x2B"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="grt-NM-bT7" secondAttribute="trailing" constant="15" id="4eL-ov-ts4"/>
-                <constraint firstItem="NHi-WF-iV4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Gvg-3L-OBf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NHi-WF-iV4" secondAttribute="bottom" id="Mp2-46-mpP"/>
                 <constraint firstItem="eQZ-xx-JWZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="38" id="PRK-v3-aI1"/>
                 <constraint firstItem="eQZ-xx-JWZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="SJn-PA-lEg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eQZ-xx-JWZ" secondAttribute="trailing" constant="10" id="l6v-w6-uKZ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NHi-WF-iV4" secondAttribute="bottom" constant="14" id="mWL-bZ-hd9"/>
+                <constraint firstItem="NHi-WF-iV4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="olw-xY-uTi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eQZ-xx-JWZ" secondAttribute="bottom" constant="5" id="otT-xC-aHz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="grt-NM-bT7" secondAttribute="bottom" constant="9" id="t6c-bg-dQL"/>
             </constraints>
