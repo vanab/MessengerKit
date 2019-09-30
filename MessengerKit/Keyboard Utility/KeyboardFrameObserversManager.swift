@@ -81,14 +81,16 @@ class KeyboardFrameObserversManager : NSObject {
     /// - Parameters:
     ///   - forced: A boolean indicated whether update keyboard frame no matter frame changed or not. The default value is false.
     ///   - animated: A boolean indicated whether the update should be perform with animation. The default value is false.
-    private func updateKeyboardFrameForObservers(forced: Bool = false, animated: Bool = false) {
+    public func updateKeyboardFrameForObservers(forced: Bool = false, animated: Bool = false) {
         guard let keyboardView = keyboardView else { return }
-        
+//        if keyboardView.frame.height == 0 {
+//            keyboardView.frame.size.height = 291
+//        }
         let newFrame = keyboardView.frame
         guard forced || newFrame != keyboardFrame else { return }
         
         keyboardFrame = newFrame
-        let keyboardBounds = keyboardView.bounds
+        var keyboardBounds = keyboardView.bounds
         
         for observer in observers.allObjects {
             if let view = observer.view {

@@ -21,9 +21,11 @@ public class KeyboardLayoutGuide : UILayoutGuide {
             }
             
             let topConstraint = view.bottomAnchor.constraint(equalTo: topAnchor)
+            topConstraint.constant = 0
             topConstraint.priority = .defaultHigh
             
             let heightConstraint = heightAnchor.constraint(equalToConstant: 0)
+            heightConstraint.constant = 291
             
             NSLayoutConstraint.activate([
                 leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -41,10 +43,17 @@ public class KeyboardLayoutGuide : UILayoutGuide {
             
             observer = KeyboardFrameObserver(view: view) { [weak view] keyboardFrame, animated in
                 guard let view = view else { return }
-                
-                topConstraint.constant = view.bounds.height - keyboardFrame.origin.y
+                print("BEFORE")
+                print(topConstraint.constant)
+                print(heightConstraint.constant)
+                let topSpace = view.bounds.height - keyboardFrame.origin.y
+                if topSpace <= 300 {
+                    topConstraint.constant = view.bounds.height - keyboardFrame.origin.y
+                }
                 heightConstraint.constant = keyboardFrame.height
-                
+                print("AFTER")
+                print(topConstraint.constant)
+                print(heightConstraint.constant)
                 if animated {
                     view.layoutIfNeeded()
                 }

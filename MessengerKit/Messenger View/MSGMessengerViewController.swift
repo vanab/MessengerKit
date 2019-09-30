@@ -50,7 +50,7 @@ open class MSGMessengerViewController: UIViewController {
     internal var cachedSizes = [Int:CGSize]()
     
     /// This is set when the collection view `contentSize` changed so we know it's loaded
-    private var collectionViewLoaded = false {
+    public var collectionViewLoaded = false {
         didSet {
             if collectionViewLoaded && shouldScrollToBottom && !oldValue {
                 collectionView.scrollToBottom(animated: false)
@@ -111,10 +111,11 @@ open class MSGMessengerViewController: UIViewController {
         
         // Setup an observer so we can detect the keyboard appearing and keep the collectionview at the bottom
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        
+        KeyboardFrameObserversManager.shared.updateKeyboardFrameForObservers(forced: true, animated: false)
         if shouldScrollToBottom {
             collectionView.scrollToBottom(animated: true)
         }
+        
     }
     
     open override func viewDidDisappear(_ animated: Bool) {
