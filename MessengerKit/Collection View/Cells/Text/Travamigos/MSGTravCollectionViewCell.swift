@@ -26,8 +26,8 @@ open class MSGTravCollectionViewCell: MSGMessageCell {
     override open var style: MSGMessengerStyle? {
         didSet {
             guard let message = message, let style = style as? MSGTravamigosStyle else { return }
-            bubble.linkTextAttributes[NSAttributedStringKey.underlineColor.rawValue] = style.outgoingLinkColor
-            bubble.linkTextAttributes[NSAttributedStringKey.foregroundColor.rawValue] = style.outgoingLinkColor
+            bubble.linkTextAttributes[NSAttributedStringKey.underlineColor.rawValue] = message.user.isSender ? style.outgoingLinkColor : style.incomingLinkColor
+            bubble.linkTextAttributes[NSAttributedStringKey.foregroundColor.rawValue] = message.user.isSender ? style.outgoingLinkColor : style.incomingLinkColor
             bubble.font = style.font
             bubble.textColor = message.user.isSender ? style.outgoingTextColor : style.incomingTextColor
             bubble.gradientLayer.colors = message.user.isSender ? style.outgoingGradient : style.incomingGradient
