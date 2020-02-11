@@ -47,7 +47,7 @@ public class KeyboardLayoutGuide : UILayoutGuide {
                 print(topConstraint.constant)
                 print(heightConstraint.constant)
                 let topSpace = view.bounds.height - keyboardFrame.origin.y
-                if topSpace <= 300 {
+                if topSpace <= 400 {
                     topConstraint.constant = view.bounds.height - keyboardFrame.origin.y
                 }
                 heightConstraint.constant = keyboardFrame.height
